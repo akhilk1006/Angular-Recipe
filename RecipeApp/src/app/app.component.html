@@ -1,6 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
+<app-header (navigationEvent)="showComponent($event)"></app-header>
 <div class="container">
-  <h1>Recipe App</h1>
+    <div class="row">
+        <div class="col-md-12">
+            <app-recipes *ngIf="currentNavComponent === 'app-recipes' || currentNavComponent.length === 0"></app-recipes>
+            <app-shopping-list *ngIf="currentNavComponent === 'app-shopping-list'"></app-shopping-list>
+        </div>
+    </div>
+    <app-recipe-item></app-recipe-item>
 </div>
-<app-recipes></app-recipes>
+
+
+
