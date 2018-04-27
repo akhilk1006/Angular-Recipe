@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Renderer, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { componentFactoryName } from '@angular/compiler';
 
 @Component({
@@ -9,11 +9,9 @@ import { componentFactoryName } from '@angular/compiler';
 export class HeaderComponent implements OnInit {
   @Output() navigationEvent: EventEmitter<string> = new EventEmitter<string>();
   constructor() { }
-
   ngOnInit() {
   }
   showComponent: (componentName : string)=>void = function(componentName: string) {
     this.navigationEvent.emit(componentName);
   };
-
 }
