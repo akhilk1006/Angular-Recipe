@@ -1,11 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<app-header (navigationEvent)="showComponent($event)"></app-header>
+<app-header></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-recipes *ngIf="currentNavComponent === 'app-recipes' || currentNavComponent.length === 0"></app-recipes>
-            <app-shopping-list *ngIf="currentNavComponent === 'app-shopping-list'"></app-shopping-list>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>

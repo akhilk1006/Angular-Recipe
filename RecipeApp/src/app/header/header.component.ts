@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter, Renderer, Renderer2, ElementRef, ViewChild } from '@angular/core';
 import { componentFactoryName } from '@angular/compiler';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +8,7 @@ import { componentFactoryName } from '@angular/compiler';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() navigationEvent: EventEmitter<string> = new EventEmitter<string>();
-  constructor() { }
+  constructor(private router: Router) { }
   ngOnInit() {
   }
-  showComponent: (componentName : string)=>void = function(componentName: string) {
-    this.navigationEvent.emit(componentName);
-  };
 }
