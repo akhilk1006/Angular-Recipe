@@ -12,6 +12,8 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { AppRouter } from './shared/approuter.router';
+import { NoRecipeSelectedComponent } from './no-recipe-selected-component/no-recipe-selected-component.component';
+import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -24,7 +26,9 @@ import { AppRouter } from './shared/approuter.router';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
-    DropdownDirective
+    DropdownDirective,
+    NoRecipeSelectedComponent,
+    RecipeEditComponent
   ],
   imports: [
     BrowserModule,
