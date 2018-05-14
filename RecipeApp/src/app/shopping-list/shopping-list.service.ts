@@ -13,4 +13,7 @@ export class ShoppingListService {
     addNewIngredient: (ingredient: Ingredient)=>void = function(ingredient: Ingredient){
         this.ingredients.push(ingredient);
     }
+    removeIngredientAtIndex: (index: number)=>void = function(index: number){
+        this.ingredients.splice(index, 1);
+    }
 }

@@ -30,6 +30,11 @@
   </div>
   <div class="row">
       <div class="col-xs-12">
-        Ingredients
+        <div class="list-group">
+          <div class="list-group-item" *ngFor="let ingredient of recipe.ingredients">
+            <span class="badge">{{ ingredient.amount }}</span>
+            {{ ingredient.name }}
+          </div>
+        </div>
       </div>
   </div>
