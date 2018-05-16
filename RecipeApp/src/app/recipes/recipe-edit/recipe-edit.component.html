@@ -2,7 +2,7 @@
   <div class="col-xs-12">
     <form [formGroup]="recipeForm">
           <div class="form-group">
-            <button type="submit" class="btn btn-success">Submit</button>
+            <button type="submit" class="btn btn-success" [disabled]="!recipeForm.valid">Submit</button>
             <button type="button" class="btn btn-danger">Cancel</button>
           </div>
           <div class="form-group">
@@ -40,6 +40,6 @@
           </div>
     </form>
     <hr>
-    <button class="btn btn-primary">Add Ingredient</button>
+    <button class="btn btn-primary" (click)="addIngredient()">Add Ingredient</button>
   </div>
 </div>
