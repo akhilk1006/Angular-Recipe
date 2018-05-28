@@ -13,6 +13,10 @@ export class RecipeService {
         "https://source.unsplash.com/OvNsLemoVEw", [
          new Ingredient("Meat", 1), new Ingredient("Chipotle Sauce", 1),
          new Ingredient("Cucumber", 2), new Ingredient("Tomato", 1)  
+        ]),
+        new Recipe("Spaghetti!!!","Very tasteful",
+        "http://cdn23.beszamel.smcloud.net/t/thumbs/660/441/1/user_photos/shutterstock_451793926.jpg", [
+        new Ingredient("Spaghetti", 10), new Ingredient("Tomatoes", 2)
         ])
     ];
     public recipesChanged: Subject<Recipe[]> = new Subject<Recipe[]>();
@@ -32,6 +36,10 @@ export class RecipeService {
     }
     deleteRecipe(index: number) {
         this.recipes.splice(index, 1);
+        this.recipesChanged.next(this.recipes.slice());
+    }
+    setRecipes(recipes: Array<Recipe>){
+        this.recipes = recipes;
         this.recipesChanged.next(this.recipes.slice());
     }
 }
