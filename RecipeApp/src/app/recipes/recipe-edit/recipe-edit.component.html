@@ -23,7 +23,7 @@
         <div class="form-group">
           <div class="row" formArrayName="ingredients">
             <div class="col-xs-12">
-              <div class="row" *ngFor="let ingredientControl of recipeForm.get('ingredients').controls; let i = index" [formGroupName]="i"
+              <div class="row" *ngFor="let ingredientControl of getControls(); let i = index" [formGroupName]="i"
                 [ngStyle]="{'margin-top.px': 10}">
               <div class="col-xs-8">
                   <input type="text" class="form-control" formControlName="name">

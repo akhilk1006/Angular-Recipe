@@ -26,4 +26,7 @@ export class HeaderComponent implements OnInit {
     this.recipeService.setRecipes(response);
     });
   }
+  isAuthenticated(){
+    return this.authService.isAuthenticated();
+  }
 }

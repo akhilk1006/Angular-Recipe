@@ -19,6 +19,6 @@ export class SigninComponent implements OnInit {
     this.route.queryParams.subscribe((params: Params) => {
       this.redirectURL = params['returnTo'] || '/';
     });
-    this.authService.signInUserAndRedirect(form.value.email,form.value.password, this.redirectURL);
+    this.authService.signInUserAndRedirect(form.value.email, form.value.password, this.redirectURL);
   }
 }
